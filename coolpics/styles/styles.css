@@ -1,0 +1,28 @@
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    background-color: blue;
+    color: white;
+}
+
+body {
+    text-align: center;
+    display: grid;
+    text-wrap: var(body);
+    margin: auto;
+    background-color: lightgrey;
+}
+
+footer {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+}
