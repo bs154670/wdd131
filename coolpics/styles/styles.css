@@ -1,46 +1,86 @@
-img {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  margin: 0 auto;
+body {
+  background-color: lightgrey;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  background-color: blue;
+  color: white;
+}
+
+nav {
+  text-align: center;
+  background-color: blue;
+}
+
+nav a {
+  color: white;
 }
 
 .image-row {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   gap: 16px;
+  padding: 20px;
 }
 
 @media (max-width: 768px) {
   .image-row {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
   }
 }
 
 @media (max-width: 480px) {
   .image-row {
     grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 1fr);
   }
 }
 
-h1 {
-    text-align: center;
-    background-color: rgb(59, 142, 251);
-    color: white;
+.image-row img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: opacity 0.2s;
 }
 
-body {
-    text-align: center;
-    display: grid;
-    text-wrap: var(body);
-    margin: auto;
-    background-color: lightgrey;
+.image-row img:hover {
+  opacity: 0.8;
 }
 
-footer {
-    text-align: center;
+dialog {
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  max-width: 90vw;
+  max-height: 90vh;
 }
 
-nav {
-    text-align: center;
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+#lightbox-img {
+  max-width: 85vw;
+  max-height: 85vh;
+  object-fit: contain;
+  display: block;
+}
+
+.close-viewer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+  cursor: pointer;
 }
